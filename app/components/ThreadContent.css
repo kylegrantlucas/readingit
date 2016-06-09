@@ -5,3 +5,7 @@
 .containerWebview h2 {
   font-size: 5rem;
 }
+
+.containerWebview webview {
+  height: 100%
+}
