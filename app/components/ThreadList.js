@@ -22,7 +22,7 @@ class ThreadList extends Component {
 
   render() {
     return (
-      <Resizable width={'30%'} height={'100%'} minWidth={100} minHeight={5000} maxWidth={700} maxHeight={5000}>
+      <Resizable width={'30%'} height={'100%'} minWidth={200} minHeight={5000} maxWidth={700} maxHeight={5000}>
         <span>{this.props.threads.map(thread => <ThreadCard key={thread.id} thread={thread} />)}</span>
       </Resizable>
     );

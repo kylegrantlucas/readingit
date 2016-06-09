@@ -1,8 +1,8 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
+  "name": "readit",
+  "productName": "Readit",
   "version": "0.10.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
+  "description": "An Electron and React based Reddit client.",
   "main": "main.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --recursive --require ./test/setup.js test/**/*.spec.js",
@@ -25,16 +25,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
+    "url": "git+https://github.com/kylegrantlucas/readit"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
+    "name": "Kyle Lucas",
+    "email": "kglucas93@gmail.com",
     "url": "https://github.com/chentsulin"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chentsulin/electron-react-boilerplate/issues"
+    "url": "https://github.com/kylegrantlucas/readit/issues"
   },
   "keywords": [
     "electron",
@@ -45,7 +45,7 @@
     "webpack",
     "react-hot"
   ],
-  "homepage": "https://github.com/chentsulin/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/kylegrantlucas/readit#readme",
   "devDependencies": {
     "asar": "^0.11.0",
     "babel-core": "^6.9.0",
@@ -85,11 +85,13 @@
     "minimist": "^1.2.0",
     "mocha": "^2.5.3",
     "node-libs-browser": "^1.0.0",
+    "node-sass": "^3.7.0",
     "react-addons-test-utils": "^15.1.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-logger": "^2.6.1",
+    "sass-loader": "^3.2.0",
     "selenium-webdriver": "^2.53.2",
     "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
@@ -101,6 +103,7 @@
     "css-modules-require-hook": "^4.0.0",
     "electron-debug": "^1.0.0",
     "font-awesome": "^4.6.3",
+    "material-ui": "^0.15.0",
     "postcss": "^5.0.21",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
@@ -110,6 +113,7 @@
     "react-router": "^2.4.1",
     "react-router-redux": "^4.0.4",
     "react-sidebar": "^2.1.2",
+    "react-toolbox": "^1.0.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "snoowrap": "^1.2.0",
