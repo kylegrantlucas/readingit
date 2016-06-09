@@ -1,0 +1,11 @@
+.containerComments {
+  flex: 1;
+}
+
+.containerComments h2 {
+  font-size: 5rem;
+}
+
+.containerComments a {
+  font-size: 1.4rem;
+}

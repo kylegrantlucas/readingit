@@ -1,0 +1,7 @@
+.containerWebview {
+  flex: 1;
+}
+
+.containerWebview h2 {
+  font-size: 5rem;
+}

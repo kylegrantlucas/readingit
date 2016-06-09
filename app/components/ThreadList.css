@@ -1,0 +1,11 @@
+#thread_list {
+  flex: 0 0 30%;
+}
+
+.container h2 {
+  font-size: 5rem;
+}
+
+.container a {
+  font-size: 1.4rem;
+}

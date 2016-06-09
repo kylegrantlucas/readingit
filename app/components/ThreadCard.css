@@ -1,0 +1,12 @@
+.card {
+  position: relative;
+  border: 2pt solid black;
+}
+
+.card h2 {
+  font-size: 10pt;
+}
+
+.card a {
+  font-size: 1.4rem;
+}
