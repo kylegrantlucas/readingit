@@ -1,7 +1,5 @@
 import { app, BrowserWindow, Menu, shell } from 'electron';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Needed for onTouchTap
 // Check this repo:

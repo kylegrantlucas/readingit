@@ -1,9 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import styles from './CommentCard.css';
-import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
+import { Card, CardHeader } from 'material-ui/Card';
 
 class CommentCard extends Component {
+  static propTypes = {
+    comment: PropTypes.object.isRequired
+  };
+
   render() {
     return (
       <div className={styles.card}>

@@ -3,12 +3,16 @@ import styles from './ThreadList.css';
 import ThreadCard from './ThreadCard.js';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Resizable from 'react-resizable-box';
 import Snoowrap from 'snoowrap';
 import * as ThreadListActions from '../actions/threadList';
 
 
 class ThreadList extends Component {
+  static propTypes = {
+    addThread: PropTypes.func.isRequired,
+    threads: PropTypes.array.isRequired
+  };
+
   componentDidMount() {
     const r = new Snoowrap({
       client_id: 'XT5AV19GYeWMew',
@@ -17,22 +21,20 @@ class ThreadList extends Component {
       user_agent: 'Electron:io.readit:v0.0.1 (by /u/thejazi13)'
     });
 
-    r.get_hot({limit: 150}).then(data => this.props.addThread(data));
+    r.get_hot({ limit: 150 }).then(data => this.props.addThread(data));
   }
 
   render() {
     return (
       <div className={styles.threadList}>
-        <span>{this.props.threads.map(thread => <ThreadCard key={thread.id} thread={thread} />)}</span>
+        <span>
+          {this.props.threads.map(thread =>
+            <ThreadCard key={thread.id} thread={thread} />)}
+        </span>
       </div>
     );
   }
 }
-
-ThreadList.propTypes = {
-  addThread: PropTypes.func.isRequired,
-  threads: PropTypes.array.isRequired
-};
 
 function mapStateToProps(state) {
   return {

@@ -7,16 +7,25 @@ import * as CommentListActions from '../actions/commentList';
 import Snoowrap from 'snoowrap';
 
 class CommentList extends Component {
-  componentDidUpdate(prevProps, prevState) {
+  static propTypes = {
+    addCommentToThread: PropTypes.func.isRequired,
+    clearOpenCommentThread: PropTypes.func.isRequired,
+    thread: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired
+  };
+
+  componentDidUpdate(prevProps) {
     const r = new Snoowrap({
       client_id: 'XT5AV19GYeWMew',
       client_secret: 'g6IQWScHYuSc17C7zG89U3lgfwE',
       refresh_token: '14274046-8wGjg7O07gGt7KLH3OBrZfME3A0',
       user_agent: 'Electron:io.readit:v0.0.1 (by /u/thejazi13)'
     });
+
     if (prevProps.thread.id !== this.props.thread.id) {
       this.props.clearOpenCommentThread();
-      r.get_submission(this.props.thread.id).fetch().then(data => this.props.addCommentToThread(data.comments));
+      r.get_submission(this.props.thread.id).fetch().then(data =>
+        this.props.addCommentToThread(data.comments));
     }
   }
 
@@ -28,13 +37,6 @@ class CommentList extends Component {
     );
   }
 }
-
-CommentList.propTypes = {
-  addCommentToThread: PropTypes.func.isRequired,
-  clearOpenCommentThread: PropTypes.func.isRequired,
-  thread: PropTypes.object.isRequired,
-  comments: PropTypes.array.isRequired
-};
 
 function mapStateToProps(state) {
   return {
