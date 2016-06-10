@@ -17,14 +17,14 @@ class ThreadList extends Component {
       user_agent: 'Electron:io.readit:v0.0.1 (by /u/thejazi13)'
     });
 
-    r.get_hot().then(data => this.props.addThread(data));
+    r.get_hot({limit: 150}).then(data => this.props.addThread(data));
   }
 
   render() {
     return (
-      <Resizable width={'30%'} height={'100%'} minWidth={200} minHeight={5000} maxWidth={700} maxHeight={5000}>
+      <div className={styles.threadList}>
         <span>{this.props.threads.map(thread => <ThreadCard key={thread.id} thread={thread} />)}</span>
-      </Resizable>
+      </div>
     );
   }
 }

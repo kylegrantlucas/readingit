@@ -10,7 +10,7 @@ export default class App extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
-      <div>
+      <div styles='height: 100%;'>
         {this.props.children}
         {
           (() => {

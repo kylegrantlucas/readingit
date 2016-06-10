@@ -1,5 +1,18 @@
 .container {
+  flex: 1;
   display: flex;
+  height: 100%;
+}
+
+.containerLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.containerRight {
+  flex: 0 0 30%;
 }
 
 .container h2 {

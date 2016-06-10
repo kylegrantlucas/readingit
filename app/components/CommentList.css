@@ -1,5 +1,11 @@
 .containerComments {
   flex: 1;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 10px;
+  padding-left: 7px;
+  background-color: #d9d9d9;
+  padding-top: 10px;
 }
 
 .containerComments h2 {

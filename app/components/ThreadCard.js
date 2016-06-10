@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import styles from './ThreadCard.scss';
+import styles from './ThreadCard.css';
 import { bindActionCreators } from 'redux';
 import * as ThreadCardActions from '../actions/threadCard';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
@@ -14,7 +14,7 @@ class ThreadCard extends Component {
 
   render() {
     return (
-      <div styles={styles.card} onClick={() => this.props.openThread(this.props.thread)}>
+      <div className={styles.card} onClick={() => this.props.openThread(this.props.thread)}>
       <Card>
         <CardHeader
           avatar={this.props.thread.thumbnail}

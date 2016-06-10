@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import styles from './CommentList.css';
 import { bindActionCreators } from 'redux';
@@ -17,7 +16,7 @@ class CommentList extends Component {
     });
     if (prevProps.thread.id !== this.props.thread.id) {
       this.props.clearOpenCommentThread();
-      r.get_submission(this.props.thread.id).expand_replies({limit: Infinity, depth: Infinity}).then(data => this.props.addCommentToThread(data.comments));
+      r.get_submission(this.props.thread.id).fetch().then(data => this.props.addCommentToThread(data.comments));
     }
   }
 
@@ -32,6 +31,7 @@ class CommentList extends Component {
 
 CommentList.propTypes = {
   addCommentToThread: PropTypes.func.isRequired,
+  clearOpenCommentThread: PropTypes.func.isRequired,
   thread: PropTypes.object.isRequired,
   comments: PropTypes.array.isRequired
 };

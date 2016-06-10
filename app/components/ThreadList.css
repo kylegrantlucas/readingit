@@ -1,5 +1,10 @@
-#thread_list {
-  flex: 0 0 30%;
+.threadList {
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 5px;
+  padding-left: 7px;
+  background-color: #d9d9d9;
+  padding-top: 3px;
 }
 
 .container h2 {
