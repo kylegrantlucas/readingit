@@ -1,9 +1,4 @@
 # Readit
-
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][david_img]][david_site]
-
 ## Install
 
 First, clone the repo via git:
@@ -17,6 +12,8 @@ And then install dependencies.
 ```bash
 $ cd readit && npm install
 ```
+## Screenshot
+![readingit screenshot](http://i.imgur.com/9M5osfx.png)
 
 ## Run
 
