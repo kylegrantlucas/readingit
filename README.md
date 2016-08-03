@@ -1,4 +1,4 @@
-# Readit
+# Readingit
 ## Install
 
 First, clone the repo via git:
