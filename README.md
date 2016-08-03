@@ -4,13 +4,13 @@
 First, clone the repo via git:
 
 ```bash
-git clone https://github.com/kylegrantlucas/readit.git
+git clone https://github.com/kylegrantlucas/readingit.git
 ```
 
 And then install dependencies.
 
 ```bash
-$ cd readit && npm install
+$ cd readingit && npm install
 ```
 ## Screenshot
 ![readingit screenshot](http://i.imgur.com/9M5osfx.png)
