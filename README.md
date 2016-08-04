@@ -1,4 +1,8 @@
 # Readingit
+[![Code Climate](https://codeclimate.com/github/kylegrantlucas/readingit/badges/gpa.svg)](https://codeclimate.com/github/kylegrantlucas/readingit) 
+
+An Electron and React based Reddit client for desktops.
+
 ## Install
 
 First, clone the repo via git:
